@@ -23,13 +23,13 @@ $sanitize_all_escapes=true;
 
 //STOP FAKE REGISTER GLOBALS
 $fake_register_globals=false;
-//
+
 
 require_once("../../globals.php");
 require_once("$srcdir/sql.inc");
 require_once("$srcdir/log.inc");
 
-//retrieve the user name
+//retrieve user name
 $res = sqlQuery("select username from users where username=?", array($_SESSION{"authUser"}) );
 $uname=$res{"username"};
 //if the mode variable is set to disclosure, retrieve the values from 'disclosure_form ' in record_disclosure.php to store it in database.
